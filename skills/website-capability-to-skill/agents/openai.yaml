@@ -1,0 +1,4 @@
+interface:
+  display_name: "Website Capability To Skill"
+  short_description: "Convert website capabilities into API-first skills"
+  default_prompt: "Given a website URL, discover its capabilities, map them to APIs, and generate an API-first skill with auth cache fallback."
