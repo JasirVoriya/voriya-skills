@@ -1,0 +1,4 @@
+interface:
+  display_name: "Publish Local Skill"
+  short_description: "Publish a local skill into any skills repo"
+  default_prompt: "Publish a local skill folder into a target repository under skills/, then commit and push the change."
