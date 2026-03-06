@@ -1,0 +1,4 @@
+interface:
+  display_name: "Redact Sensitive Content"
+  short_description: "扫描并脱敏 Markdown 文档中的敏感信息后再发布或分享"
+  default_prompt: "Use $redact-sensitive-content to review Markdown files, find sensitive information, and sanitize the content before publishing or sharing it."
