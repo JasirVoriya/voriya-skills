@@ -32,6 +32,7 @@ description: API-first integration skill for <domain>. Use when tasks target thi
 ## Minimum generated files
 
 - `SKILL.md`
+- `README.md`
 - `agents/openai.yaml`
 - `scripts/auth_cache.py`
 - `references/capability-map.md`

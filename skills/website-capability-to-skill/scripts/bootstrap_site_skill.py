@@ -144,6 +144,39 @@ updated when APIs change.
 """
 
 
+def readme_template(skill_name: str, host: str, target_url: str) -> str:
+    host_slug = slugify(host)
+    return f"""# {skill_name}
+
+Generated API-first skill scaffold for `{host}`.
+
+## Target context
+
+- Target URL: `{target_url}`
+- Target host: `{host}`
+- Auth cache: `~/.{host_slug}-auth.yaml`
+
+## Generated files
+
+```text
+{skill_name}/
+  SKILL.md
+  README.md
+  agents/openai.yaml
+  scripts/auth_cache.py
+  references/capability-map.md
+```
+
+## Quick start
+
+1. Update endpoint mappings in `references/capability-map.md`.
+2. Read existing auth cache:
+   `python3 scripts/auth_cache.py read --url "{target_url}"`
+3. Validate auth before API calls:
+   `python3 scripts/auth_cache.py is-valid --url "{target_url}"`
+"""
+
+
 def openai_yaml_template(display_name: str, short_description: str) -> str:
     return (
         "interface:\n"
@@ -180,6 +213,10 @@ def create_skill(args: argparse.Namespace) -> Path:
 
     (skill_dir / "SKILL.md").write_text(
         skill_md_template(skill_name, host, target_url),
+        encoding="utf-8",
+    )
+    (skill_dir / "README.md").write_text(
+        readme_template(skill_name, host, target_url),
         encoding="utf-8",
     )
     (skill_dir / "agents" / "openai.yaml").write_text(
