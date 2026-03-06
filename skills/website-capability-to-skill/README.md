@@ -71,6 +71,15 @@ npx -y skills add <owner>/<repo> --skill website-capability-to-skill -a codex -g
 
 安装完成后，重启对应 AI 客户端以加载新 skill。
 
+## 触发词和触发场景
+
+你可以通过明确提到 skill 名称或能力目标来触发这个 skill。
+
+- 触发词：`website-capability-to-skill`、`网站能力转 skill`、`API-first skill`
+- 触发场景：网站能力梳理、接口反推、站点专用 skill 生成、鉴权恢复接入
+- 最小输入：目标网站 URL（例如 `https://example.com`）
+- 预期输出：生成的 skill 目录、能力映射、鉴权流程和验证结论
+
 ## 怎么写提示词触发能力
 
 下面这些提示词可以直接复制给 AI。

@@ -72,6 +72,19 @@ npx -y skills add <owner>/<repo> --skill website-capability-to-skill -a codex -g
 
 After installation, restart your AI client to load the new skill.
 
+## Trigger words and scenarios
+
+You can trigger this skill by naming the skill directly or by stating the
+capability goal.
+
+- Trigger words: `website-capability-to-skill`, `website to skill`,
+  `API-first skill`
+- Trigger scenarios: capability discovery, API mapping, skill scaffolding, auth
+  recovery integration
+- Minimum input: a target website URL, for example `https://example.com`
+- Expected output: generated skill folder, capability map, auth flow, and
+  verification result
+
 ## Prompt examples
 
 You can copy these prompts directly.
